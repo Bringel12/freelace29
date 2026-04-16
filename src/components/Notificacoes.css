@@ -1,0 +1,415 @@
+/* ============================================
+   NOTIFICAÇÕES.CSS - ESTILOS EXCLUSIVOS
+   ============================================ */
+
+:root {
+    --primary-color: #0a66c2;
+    --primary-dark: #004182;
+    --primary-light: #e8f1ff;
+    --secondary-color: #666;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --light-color: #f8f9fa;
+    --dark-color: #333;
+    --border-color: #dee2e6;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 8px 22px rgba(0,0,0,0.08);
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --transition: all 0.3s ease;
+}
+
+/* Topbar */
+.notificacoes-topbar {
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: #fff;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.notificacoes-topbar .topbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notificacoes-topbar h1 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.notificacoes-topbar h1 span {
+    color: var(--warning-color);
+}
+
+.notificacoes-topbar .topbar-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.notificacoes-topbar .topbar-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+/* Container Principal */
+.notificacoes-main {
+    background: linear-gradient(180deg, var(--primary-light) 0%, #f3f2ef 100%);
+    min-height: calc(100vh - 76px);
+    padding: 30px 20px;
+}
+
+.notificacoes-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.notificacoes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.notificacoes-header h2 {
+    font-size: 24px;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notificacoes-header h2 i {
+    color: var(--primary-color);
+}
+
+.btn-marcar-todas {
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.btn-marcar-todas:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Tabs */
+.notificacoes-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: white;
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    transition: var(--transition);
+    position: relative;
+}
+
+.tab-btn:hover {
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.tab-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--danger-color);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+/* Lista de Notificações */
+.notificacoes-lista {
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.notificacao-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+}
+
+.notificacao-item:last-child {
+    border-bottom: none;
+}
+
+.notificacao-item:hover {
+    background: var(--primary-light);
+}
+
+.notificacao-item.nao-lida {
+    background: #fff9e6;
+}
+
+.notificacao-item.nao-lida::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--primary-color);
+}
+
+/* Ícone da notificação */
+.notificacao-icone {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.notificacao-icone.curtida {
+    background: #fee7e7;
+    color: #e74c3c;
+}
+
+.notificacao-icone.comentario {
+    background: #e7f3ff;
+    color: var(--primary-color);
+}
+
+.notificacao-icone.pedido {
+    background: #e8f5e9;
+    color: var(--success-color);
+}
+
+.notificacao-icone.sucesso {
+    background: #e8f5e9;
+    color: var(--success-color);
+}
+
+.notificacao-icone.projeto {
+    background: #fff3e0;
+    color: #f39c12;
+}
+
+/* Conteúdo da notificação */
+.notificacao-conteudo {
+    flex: 1;
+    min-width: 0;
+}
+
+.notificacao-mensagem {
+    font-size: 15px;
+    color: var(--dark-color);
+    margin-bottom: 4px;
+    word-break: break-word;
+}
+
+.notificacao-status {
+    font-size: 12px;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.notificacao-status.amigo {
+    color: var(--success-color);
+}
+
+.notificacao-status.expirado {
+    color: var(--danger-color);
+}
+
+.notificacao-status.sucesso {
+    color: var(--success-color);
+}
+
+.notificacao-tempo {
+    font-size: 12px;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+/* Ações da notificação */
+.notificacao-acoes {
+    display: flex;
+    gap: 10px;
+    margin-left: 15px;
+    flex-shrink: 0;
+}
+
+.btn-aceitar, .btn-recusar {
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-aceitar {
+    background: var(--success-color);
+    color: white;
+}
+
+.btn-aceitar:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-recusar {
+    background: var(--danger-color);
+    color: white;
+}
+
+.btn-recusar:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.btn-marcar-lida {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 50%;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.btn-marcar-lida:hover {
+    background: var(--light-color);
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    text-align: center;
+    padding: 50px;
+    color: var(--secondary-color);
+}
+
+.loading-spinner i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* Mensagem de sem notificações */
+.sem-notificacoes {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--secondary-color);
+}
+
+.sem-notificacoes i {
+    font-size: 60px;
+    color: var(--border-color);
+    margin-bottom: 20px;
+}
+
+.sem-notificacoes p {
+    font-size: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .notificacoes-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .notificacao-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .notificacao-icone {
+        margin-right: 0;
+    }
+
+    .notificacao-acoes {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .btn-aceitar, .btn-recusar {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .notificacoes-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 5px;
+    }
+    
+    .tab-btn {
+        white-space: nowrap;
+    }
+}

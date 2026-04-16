@@ -1,0 +1,1475 @@
+/* ===== TODAS AS CLASSES COM PREFIXO "usuario-" ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.usuario-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+/* ===== HEADER DO PERFIL ===== */
+.usuario-profile-header {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .usuario-profile-header {
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        text-align: left;
+    }
+}
+
+.usuario-profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0a66c2;
+}
+
+@media (min-width: 480px) {
+    .usuario-profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.usuario-profile-info {
+    flex: 1;
+    width: 100%;
+}
+
+.usuario-profile-info h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #333;
+    word-break: break-word;
+}
+
+@media (min-width: 480px) {
+    .usuario-profile-info h1 {
+        font-size: 28px;
+    }
+}
+
+.usuario-profile-info p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+@media (min-width: 480px) {
+    .usuario-profile-info p {
+        font-size: 16px;
+    }
+}
+
+/* ===== ESTATÍSTICAS ===== */
+.usuario-profile-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .usuario-profile-stats {
+        justify-content: flex-start;
+        gap: 30px;
+    }
+}
+
+.usuario-stat {
+    text-align: center;
+    min-width: 70px;
+}
+
+.usuario-stat-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0a66c2;
+}
+
+@media (min-width: 480px) {
+    .usuario-stat-value {
+        font-size: 20px;
+    }
+}
+
+.usuario-stat-label {
+    font-size: 12px;
+    color: #666;
+}
+
+@media (min-width: 480px) {
+    .usuario-stat-label {
+        font-size: 14px;
+    }
+}
+
+/* ===== BOTÕES DE RELACIONAMENTO ===== */
+.usuario-relationship-button {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+@media (min-width: 480px) {
+    .usuario-relationship-button {
+        width: auto;
+        min-width: 150px;
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .usuario-relationship-button {
+        margin-left: auto;
+        width: auto;
+    }
+}
+
+.usuario-relationship-button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* ===== BOTÃO VOLTAR ===== */
+.usuario-back-button {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 200px;
+}
+
+@media (min-width: 480px) {
+    .usuario-back-button {
+        width: auto;
+    }
+}
+
+.usuario-back-button:hover {
+    background: #084e94;
+}
+
+/* ===== ABAS ===== */
+.usuario-profile-tabs {
+    display: flex;
+    gap: 5px;
+    margin: 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.usuario-profile-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.usuario-tab-button {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+@media (min-width: 480px) {
+    .usuario-tab-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+.usuario-tab-button:hover {
+    background: #f0f2f5;
+    color: #0a66c2;
+}
+
+.usuario-tab-button.active {
+    background: #0a66c2;
+    color: white;
+}
+
+/* ===== CONTEÚDO DAS ABAS ===== */
+.usuario-tab-content {
+    display: none;
+}
+
+.usuario-tab-content.active {
+    display: block;
+}
+
+/* ===== CONTAINERS ===== */
+.usuario-posts-container,
+.usuario-followers-container,
+.usuario-following-container {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media (min-width: 480px) {
+    .usuario-posts-container,
+    .usuario-followers-container,
+    .usuario-following-container {
+        padding: 20px;
+    }
+}
+
+.usuario-posts-title {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 480px) {
+    .usuario-posts-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+.usuario-followers-container h4,
+.usuario-following-container h4 {
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 15px;
+    border-bottom: 2px solid #0a66c2;
+    padding-bottom: 6px;
+}
+
+@media (min-width: 480px) {
+    .usuario-followers-container h4,
+    .usuario-following-container h4 {
+        margin-bottom: 15px;
+        font-size: 16px;
+        padding-bottom: 8px;
+    }
+}
+
+/* ===== CARDS DE POST ===== */
+.usuario-post-card {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+@media (min-width: 480px) {
+    .usuario-post-card {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+}
+
+.usuario-post-time {
+    margin: 0 0 8px 0;
+    color: #666;
+    font-size: 12px;
+}
+
+@media (min-width: 480px) {
+    .usuario-post-time {
+        font-size: 13px;
+    }
+}
+
+.usuario-post-content {
+    margin: 0;
+    line-height: 1.5;
+    color: #333;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+@media (min-width: 480px) {
+    .usuario-post-content {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+.usuario-post-midias {
+    margin-top: 12px;
+}
+
+.usuario-post-midia {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 8px;
+    margin-top: 8px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.usuario-post-midia:hover {
+    opacity: 0.9;
+}
+
+@media (min-width: 480px) {
+    .usuario-post-midia {
+        max-height: 300px;
+    }
+}
+
+.usuario-post-orcamento {
+    margin-top: 8px;
+    color: #2e7d32;
+    font-size: 14px;
+}
+
+.usuario-post-categoria {
+    margin-top: 5px;
+    color: #1565c0;
+    font-size: 14px;
+}
+
+.usuario-post-stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 480px) {
+    .usuario-post-stats {
+        gap: 20px;
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+}
+
+.usuario-post-stats span {
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ===== LISTAS DE USUÁRIOS ===== */
+.usuario-user-list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 480px) {
+    .usuario-user-list-item {
+        padding: 12px;
+        gap: 15px;
+        flex-wrap: nowrap;
+    }
+}
+
+.usuario-user-list-item:hover {
+    background: #f8f9fa;
+}
+
+.usuario-user-list-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.usuario-user-list-avatar:hover {
+    transform: scale(1.05);
+    border-color: #0a66c2;
+}
+
+@media (min-width: 480px) {
+    .usuario-user-list-avatar {
+        width: 48px;
+        height: 48px;
+        margin-right: 15px;
+    }
+}
+
+.usuario-user-list-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.usuario-user-list-info strong {
+    color: #333;
+    font-size: 14px;
+    display: block;
+    word-break: break-word;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.usuario-user-list-info strong:hover {
+    color: #0a66c2;
+}
+
+@media (min-width: 480px) {
+    .usuario-user-list-info strong {
+        font-size: 15px;
+    }
+}
+
+.usuario-user-list-info p {
+    color: #666;
+    font-size: 12px;
+    margin-top: 2px;
+    word-break: break-word;
+}
+
+.usuario-view-profile-btn {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+@media (min-width: 480px) {
+    .usuario-view-profile-btn {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+}
+
+.usuario-view-profile-btn:hover {
+    background: #084e94;
+}
+
+/* ===== BADGES ===== */
+.usuario-friend-badge {
+    background-color: #28a745;
+    color: white;
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 12px;
+    margin-left: 5px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@media (min-width: 480px) {
+    .usuario-friend-badge {
+        font-size: 10px;
+        padding: 2px 8px;
+        margin-left: 8px;
+    }
+}
+
+/* ===== AMIGOS EM COMUM ===== */
+.usuario-mutual-friends-container {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.usuario-mutual-friends-title {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+@media (min-width: 480px) {
+    .usuario-mutual-friends-title {
+        font-size: 13px;
+    }
+}
+
+.usuario-mutual-friends-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.usuario-mutual-friend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: white;
+    padding: 4px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 1px solid #e0e0e0;
+    max-width: 100%;
+}
+
+@media (min-width: 480px) {
+    .usuario-mutual-friend-item {
+        gap: 5px;
+        padding: 5px 10px;
+    }
+}
+
+.usuario-mutual-friend-item:hover {
+    background: #e9ecef;
+}
+
+.usuario-mutual-friend-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@media (min-width: 480px) {
+    .usuario-mutual-friend-avatar {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.usuario-mutual-friend-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+
+@media (min-width: 480px) {
+    .usuario-mutual-friend-name {
+        font-size: 12px;
+        max-width: 150px;
+    }
+}
+
+/* ===== LOADING ===== */
+.usuario-loading {
+    text-align: center;
+    padding: 30px 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.usuario-loading i {
+    margin-right: 8px;
+    color: #0a66c2;
+}
+
+@media (min-width: 480px) {
+    .usuario-loading {
+        padding: 40px;
+    }
+}
+
+/* ===== EMPTY STATES ===== */
+.usuario-empty-state {
+    text-align: center;
+    padding: 30px 15px;
+    color: #666;
+}
+
+@media (min-width: 480px) {
+    .usuario-empty-state {
+        padding: 40px;
+    }
+}
+
+.usuario-empty-state i {
+    font-size: 36px;
+    color: #ccc;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 480px) {
+    .usuario-empty-state i {
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+}
+
+/* ===== UTILITÁRIOS ===== */
+.usuario-text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.usuario-w-100 {
+    width: 100%;
+}
+
+.usuario-mt-2 {
+    margin-top: 8px;
+}
+
+.usuario-mt-3 {
+    margin-top: 12px;
+}
+
+.usuario-mt-4 {
+    margin-top: 16px;
+}
+
+/* ===== AJUSTES PARA TELAS MUITO PEQUENAS ===== */
+@media (max-width: 360px) {
+    .usuario-profile-header {
+        padding: 20px 15px;
+    }
+    
+    .usuario-profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .usuario-profile-info h1 {
+        font-size: 20px;
+    }
+    
+    .usuario-stat-value {
+        font-size: 16px;
+    }
+    
+    .usuario-stat-label {
+        font-size: 11px;
+    }
+    
+    .usuario-tab-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    .usuario-post-card {
+        padding: 12px;
+    }
+    
+    .usuario-post-content {
+        font-size: 13px;
+    }
+    
+    .usuario-user-list-avatar {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .usuario-user-list-info strong {
+        font-size: 13px;
+    }
+    
+    .usuario-view-profile-btn {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+    
+    .usuario-mutual-friend-name {
+        max-width: 70px;
+    }
+}/* ===== TODAS AS CLASSES COM PREFIXO "usuario-" ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.usuario-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+/* ===== HEADER DO PERFIL ===== */
+.usuario-profile-header {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .usuario-profile-header {
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        text-align: left;
+    }
+}
+
+.usuario-profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0a66c2;
+}
+
+@media (min-width: 480px) {
+    .usuario-profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.usuario-profile-info {
+    flex: 1;
+    width: 100%;
+}
+
+.usuario-profile-info h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #333;
+    word-break: break-word;
+}
+
+@media (min-width: 480px) {
+    .usuario-profile-info h1 {
+        font-size: 28px;
+    }
+}
+
+.usuario-profile-info p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+@media (min-width: 480px) {
+    .usuario-profile-info p {
+        font-size: 16px;
+    }
+}
+
+/* ===== ESTATÍSTICAS ===== */
+.usuario-profile-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .usuario-profile-stats {
+        justify-content: flex-start;
+        gap: 30px;
+    }
+}
+
+.usuario-stat {
+    text-align: center;
+    min-width: 70px;
+}
+
+.usuario-stat-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0a66c2;
+}
+
+@media (min-width: 480px) {
+    .usuario-stat-value {
+        font-size: 20px;
+    }
+}
+
+.usuario-stat-label {
+    font-size: 12px;
+    color: #666;
+}
+
+@media (min-width: 480px) {
+    .usuario-stat-label {
+        font-size: 14px;
+    }
+}
+
+/* ===== BOTÕES DE RELACIONAMENTO ===== */
+.usuario-relationship-button {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+@media (min-width: 480px) {
+    .usuario-relationship-button {
+        width: auto;
+        min-width: 150px;
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .usuario-relationship-button {
+        margin-left: auto;
+        width: auto;
+    }
+}
+
+.usuario-relationship-button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* ===== BOTÃO VOLTAR ===== */
+.usuario-back-button {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 200px;
+}
+
+@media (min-width: 480px) {
+    .usuario-back-button {
+        width: auto;
+    }
+}
+
+.usuario-back-button:hover {
+    background: #084e94;
+}
+
+/* ===== ABAS ===== */
+.usuario-profile-tabs {
+    display: flex;
+    gap: 5px;
+    margin: 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.usuario-profile-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.usuario-tab-button {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+@media (min-width: 480px) {
+    .usuario-tab-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+.usuario-tab-button:hover {
+    background: #f0f2f5;
+    color: #0a66c2;
+}
+
+.usuario-tab-button.active {
+    background: #0a66c2;
+    color: white;
+}
+
+/* ===== CONTEÚDO DAS ABAS ===== */
+.usuario-tab-content {
+    display: none;
+}
+
+.usuario-tab-content.active {
+    display: block;
+}
+
+/* ===== CONTAINERS ===== */
+.usuario-posts-container,
+.usuario-followers-container,
+.usuario-following-container {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media (min-width: 480px) {
+    .usuario-posts-container,
+    .usuario-followers-container,
+    .usuario-following-container {
+        padding: 20px;
+    }
+}
+
+.usuario-posts-title {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 480px) {
+    .usuario-posts-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+.usuario-followers-container h4,
+.usuario-following-container h4 {
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 15px;
+    border-bottom: 2px solid #0a66c2;
+    padding-bottom: 6px;
+}
+
+@media (min-width: 480px) {
+    .usuario-followers-container h4,
+    .usuario-following-container h4 {
+        margin-bottom: 15px;
+        font-size: 16px;
+        padding-bottom: 8px;
+    }
+}
+
+/* ===== CARDS DE POST ===== */
+.usuario-post-card {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+@media (min-width: 480px) {
+    .usuario-post-card {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+}
+
+.usuario-post-time {
+    margin: 0 0 8px 0;
+    color: #666;
+    font-size: 12px;
+}
+
+@media (min-width: 480px) {
+    .usuario-post-time {
+        font-size: 13px;
+    }
+}
+
+.usuario-post-content {
+    margin: 0;
+    line-height: 1.5;
+    color: #333;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+@media (min-width: 480px) {
+    .usuario-post-content {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+.usuario-post-midias {
+    margin-top: 12px;
+}
+
+.usuario-post-midia {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 8px;
+    margin-top: 8px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.usuario-post-midia:hover {
+    opacity: 0.9;
+}
+
+@media (min-width: 480px) {
+    .usuario-post-midia {
+        max-height: 300px;
+    }
+}
+
+.usuario-post-orcamento {
+    margin-top: 8px;
+    color: #2e7d32;
+    font-size: 14px;
+}
+
+.usuario-post-categoria {
+    margin-top: 5px;
+    color: #1565c0;
+    font-size: 14px;
+}
+
+.usuario-post-stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 480px) {
+    .usuario-post-stats {
+        gap: 20px;
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+}
+
+.usuario-post-stats span {
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ===== LISTAS DE USUÁRIOS ===== */
+.usuario-user-list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 480px) {
+    .usuario-user-list-item {
+        padding: 12px;
+        gap: 15px;
+        flex-wrap: nowrap;
+    }
+}
+
+.usuario-user-list-item:hover {
+    background: #f8f9fa;
+}
+
+.usuario-user-list-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.usuario-user-list-avatar:hover {
+    transform: scale(1.05);
+    border-color: #0a66c2;
+}
+
+@media (min-width: 480px) {
+    .usuario-user-list-avatar {
+        width: 48px;
+        height: 48px;
+        margin-right: 15px;
+    }
+}
+
+.usuario-user-list-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.usuario-user-list-info strong {
+    color: #333;
+    font-size: 14px;
+    display: block;
+    word-break: break-word;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.usuario-user-list-info strong:hover {
+    color: #0a66c2;
+}
+
+@media (min-width: 480px) {
+    .usuario-user-list-info strong {
+        font-size: 15px;
+    }
+}
+
+.usuario-user-list-info p {
+    color: #666;
+    font-size: 12px;
+    margin-top: 2px;
+    word-break: break-word;
+}
+
+.usuario-view-profile-btn {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+@media (min-width: 480px) {
+    .usuario-view-profile-btn {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+}
+
+.usuario-view-profile-btn:hover {
+    background: #084e94;
+}
+
+/* ===== BADGES ===== */
+.usuario-friend-badge {
+    background-color: #28a745;
+    color: white;
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 12px;
+    margin-left: 5px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@media (min-width: 480px) {
+    .usuario-friend-badge {
+        font-size: 10px;
+        padding: 2px 8px;
+        margin-left: 8px;
+    }
+}
+
+/* ===== AMIGOS EM COMUM ===== */
+.usuario-mutual-friends-container {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.usuario-mutual-friends-title {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+@media (min-width: 480px) {
+    .usuario-mutual-friends-title {
+        font-size: 13px;
+    }
+}
+
+.usuario-mutual-friends-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.usuario-mutual-friend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: white;
+    padding: 4px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 1px solid #e0e0e0;
+    max-width: 100%;
+}
+
+@media (min-width: 480px) {
+    .usuario-mutual-friend-item {
+        gap: 5px;
+        padding: 5px 10px;
+    }
+}
+
+.usuario-mutual-friend-item:hover {
+    background: #e9ecef;
+}
+
+.usuario-mutual-friend-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@media (min-width: 480px) {
+    .usuario-mutual-friend-avatar {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.usuario-mutual-friend-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+
+@media (min-width: 480px) {
+    .usuario-mutual-friend-name {
+        font-size: 12px;
+        max-width: 150px;
+    }
+}
+
+/* ===== LOADING ===== */
+.usuario-loading {
+    text-align: center;
+    padding: 30px 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.usuario-loading i {
+    margin-right: 8px;
+    color: #0a66c2;
+}
+
+@media (min-width: 480px) {
+    .usuario-loading {
+        padding: 40px;
+    }
+}
+
+/* ===== EMPTY STATES ===== */
+.usuario-empty-state {
+    text-align: center;
+    padding: 30px 15px;
+    color: #666;
+}
+
+@media (min-width: 480px) {
+    .usuario-empty-state {
+        padding: 40px;
+    }
+}
+
+.usuario-empty-state i {
+    font-size: 36px;
+    color: #ccc;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 480px) {
+    .usuario-empty-state i {
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+}
+
+/* ===== UTILITÁRIOS ===== */
+.usuario-text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.usuario-w-100 {
+    width: 100%;
+}
+
+.usuario-mt-2 {
+    margin-top: 8px;
+}
+
+.usuario-mt-3 {
+    margin-top: 12px;
+}
+
+.usuario-mt-4 {
+    margin-top: 16px;
+}
+
+/* ===== AJUSTES PARA TELAS MUITO PEQUENAS ===== */
+@media (max-width: 360px) {
+    .usuario-profile-header {
+        padding: 20px 15px;
+    }
+    
+    .usuario-profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .usuario-profile-info h1 {
+        font-size: 20px;
+    }
+    
+    .usuario-stat-value {
+        font-size: 16px;
+    }
+    
+    .usuario-stat-label {
+        font-size: 11px;
+    }
+    
+    .usuario-tab-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    .usuario-post-card {
+        padding: 12px;
+    }
+    
+    .usuario-post-content {
+        font-size: 13px;
+    }
+    
+    .usuario-user-list-avatar {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .usuario-user-list-info strong {
+        font-size: 13px;
+    }
+    
+    .usuario-view-profile-btn {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+    
+    .usuario-mutual-friend-name {
+        max-width: 70px;
+    }
+}

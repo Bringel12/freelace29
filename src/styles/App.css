@@ -1,0 +1,44 @@
+/* Adicione no início */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Ajuste o caminho da imagem no Hero */
+.hero {
+    min-height: 100vh;
+    background: url("../assets/image.png") no-repeat center center; /* Caminho ajustado */
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 80px 20px 40px;
+}
+
+/* Todo o resto do seu CSS original permanece IGUAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: #3B8CDE;
+    color: white;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* ... TODO O RESTO DO SEU CSS AQUI ... */
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: #3B8CDE;
+    color: white;
+    overflow-x: hidden;
+    width: 100%;
+}

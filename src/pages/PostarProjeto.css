@@ -1,0 +1,757 @@
+/* ===== POSTAR PROJETO - CSS TOTALMENTE ISOLADO ===== */
+
+.postar-wrapper {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+/* Navbar do PostarProjeto */
+.postar-navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.postar-nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.postar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0a66c2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.postar-user-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.postar-nav-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.postar-nav-user-name {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Container Principal */
+.postar-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Breadcrumb */
+.postar-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.postar-breadcrumb a {
+    color: #0a66c2;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.postar-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.postar-breadcrumb i {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Card de Postagem */
+.postar-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.postar-card-header {
+    background: linear-gradient(135deg, #0a66c2, #054a92);
+    color: white;
+    padding: 30px;
+}
+
+.postar-card-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Formulário */
+.postar-form {
+    padding: 30px;
+}
+
+.postar-form-group {
+    margin-bottom: 25px;
+}
+
+.postar-form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.postar-form-group-half {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.postar-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}
+
+.postar-label i {
+    margin-right: 5px;
+    color: #0a66c2;
+}
+
+.postar-required {
+    color: #dc3545;
+    margin-left: 3px;
+}
+
+.postar-form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.postar-form-control:focus {
+    outline: none;
+    border-color: #0a66c2;
+    box-shadow: 0 0 0 3px rgba(10,102,194,0.1);
+}
+
+textarea.postar-form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+select.postar-form-control {
+    cursor: pointer;
+    background-color: white;
+}
+
+/* Char Counter */
+.postar-char-counter {
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Budget Input */
+.postar-budget-input {
+    display: flex;
+    align-items: center;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.postar-currency {
+    padding: 0 15px;
+    background: #f8f9fa;
+    color: #333;
+    font-weight: 500;
+    border-right: 2px solid #e0e0e0;
+}
+
+.postar-budget-input .postar-form-control {
+    border: none;
+    border-radius: 0;
+}
+
+/* Form Text */
+.postar-form-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Links do Projeto */
+.postar-link-input-group {
+    margin-bottom: 15px;
+}
+
+.postar-link-input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.postar-link-type {
+    width: 150px;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+}
+
+.postar-link-url {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.postar-btn-remove-link {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.postar-btn-add-link {
+    background: none;
+    border: 2px dashed #0a66c2;
+    color: #0a66c2;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+/* Upload de Mídia */
+.postar-media-upload-area {
+    border: 2px dashed #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.postar-upload-placeholder {
+    text-align: center;
+    cursor: pointer;
+    padding: 30px;
+}
+
+.postar-upload-placeholder i {
+    font-size: 48px;
+    color: #0a66c2;
+    margin-bottom: 10px;
+}
+
+.postar-upload-placeholder p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.postar-upload-placeholder span {
+    font-size: 13px;
+    color: #666;
+}
+
+.postar-media-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.postar-preview-item {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e0e0e0;
+}
+
+.postar-preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.postar-btn-remove-media {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(220,53,69,0.9);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+/* Colaboradores */
+.postar-collaborators-container {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.postar-collaborator-search {
+    position: relative;
+    padding: 15px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.postar-collaborator-search input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.postar-search-results {
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    right: 15px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-top: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.postar-search-result-item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.postar-search-result-item:hover {
+    background: #f0f2f5;
+}
+
+.postar-search-result-item img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.postar-collaborators-list {
+    padding: 15px;
+    min-height: 50px;
+}
+
+.postar-collaborator-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 0 5px 5px 0;
+    font-size: 13px;
+}
+
+.postar-collaborator-tag img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.postar-btn-remove-collaborator {
+    background: none;
+    border: none;
+    color: #2e7d32;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+/* Form Actions */
+.postar-form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.postar-btn-cancel {
+    background: #f8f9fa;
+    color: #666;
+    flex: 1;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.postar-btn-submit {
+    background: #0a66c2;
+    color: white;
+    flex: 2;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Loading */
+.postar-loading {
+    text-align: center;
+    padding: 60px;
+    color: #666;
+    font-size: 18px;
+}
+
+.postar-loading i {
+    margin-right: 10px;
+    color: #0a66c2;
+}
+
+/* Modal */
+.postar-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.postar-modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.postar-modal-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.postar-modal-icon-success i {
+    color: #28a745;
+}
+
+.postar-modal-content h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.postar-modal-content p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.postar-modal-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.postar-btn-primary {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #0a66c2;
+    color: white;
+}
+
+.postar-btn-secondary {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .postar-form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .postar-link-input-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .postar-link-type {
+        width: 100%;
+    }
+    
+    .postar-form-actions {
+        flex-direction: column;
+    }
+    
+    .postar-btn-cancel, .postar-btn-submit {
+        width: 100%;
+    }
+    
+    .postar-modal-content {
+        margin: 0 20px;
+        padding: 30px 20px;
+    }
+    
+    .postar-card-header h2 {
+        font-size: 22px;
+    }
+    
+    .postar-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .postar-container {
+        padding: 0 15px;
+    }
+    
+    .postar-card-header {
+        padding: 20px;
+    }
+    
+    .postar-card-header h2 {
+        font-size: 18px;
+    }
+    
+    .postar-upload-placeholder {
+        padding: 20px;
+    }
+    
+    .postar-upload-placeholder i {
+        font-size: 36px;
+    }
+    
+    .postar-preview-item {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .postar-nav-user-name {
+        display: none;
+    }
+}
+/* ===== MODAL DE SUCESSO - CORRIGIDO ===== */
+.postar-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+}
+
+.postar-modal-content {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 24px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    animation: postarModalFadeIn 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes postarModalFadeIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.postar-modal-icon {
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+
+.postar-modal-icon-success i {
+    color: #28a745;
+    background: #e8f5e9;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+}
+
+.postar-modal-content h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.postar-modal-content p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 28px;
+    line-height: 1.5;
+}
+
+.postar-modal-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.postar-btn-primary {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #0a66c2;
+    color: white;
+    min-width: 140px;
+}
+
+.postar-btn-primary:hover {
+    background: #084e94;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(10, 102, 194, 0.3);
+}
+
+.postar-btn-secondary {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #f0f2f5;
+    color: #333;
+    min-width: 140px;
+}
+
+.postar-btn-secondary:hover {
+    background: #e4e6e9;
+    transform: translateY(-2px);
+}
+
+/* Responsividade do Modal */
+@media (max-width: 480px) {
+    .postar-modal-content {
+        padding: 30px 20px;
+        width: 85%;
+    }
+    
+    .postar-modal-icon {
+        font-size: 56px;
+    }
+    
+    .postar-modal-icon-success i {
+        padding: 12px;
+    }
+    
+    .postar-modal-content h3 {
+        font-size: 22px;
+    }
+    
+    .postar-modal-content p {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+    
+    .postar-modal-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .postar-btn-primary,
+    .postar-btn-secondary {
+        padding: 10px 16px;
+        font-size: 14px;
+        min-width: auto;
+    }
+}
